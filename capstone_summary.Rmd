@@ -1,0 +1,74 @@
+---
+title: "Capstone Project Summary"
+author: "mickfenneck"
+date: "29 marzo 2015"
+bibliography: bibliography.bib
+output: html_document
+---
+
+## Abstract
+The aim of this summary is to briefly analyse the training datasets given for the Data Science Capstone Project.
+The corpora are collected from publicly available sources by a web crawler. The crawler checks for language, so as to mainly get texts consisting of the desired language. The project is built on the analysis of three datasets of each language provided by the instructor: English, German, Finnish and Russian.
+
+## Introduction
+In this summary the analysis concentrate on the english dataset because the analysis are basically the same and it's quicker to provide useful information.
+
+The english dataset is divided between:
+    - **blogs**: containing a set of internet blogs posts
+    - **news**: containing a set of internet news articles
+    - **twitter**: containing a set of twitter messages
+    
+**Blogs** and **News** datasets are similar, **twitter** is different because there is a limit of 140 character for each tweet.
+
+We collect the following forms of information:
+
+ 1. file size
+ 2. number of lines
+ 3. number of non-empty lines
+ 4. number of words
+ 5. distribution of words (quantiles and plot)
+ 6. number of characters
+ 7. number of non-white characters
+ 
+The sections this summary is divided in are **tools**,**data description**, **exploratory data analysis**, **conclusions**, **further analysis** and **references**.
+
+## Tools
+
+The analysis is entirely made in the R computing environment [@R], written on the RStudio IDE [@RStudio].
+In the project are also used the following libreries:
+    - **stringi** [@stringi]
+    - **ggplot2** [@ggplot2]
+    - **magrittr** [@magrittr].
+    - **rmarkdown ** [@rmarkdown]
+    - **knitr** [@xie2013knitr]
+
+## Data Description
+
+The corpora are contained in three separate plain-text files,
+out of which one is binary, for more information on this see [@newtest].
+We import these files as follows.
+
+
+```{r, cache=TRUE, warning=FALSE}
+# import the blogs and twitter datasets in text mode
+blogs <- readLines("/Users/mickfenneck/Desktop/final/en_US/en_US.blogs.txt", encoding="UTF-8")
+twitter <- readLines("/Users/mickfenneck/Desktop/final/en_US/en_US.twitter.txt", encoding="UTF-8")
+
+# import the news dataset in binary mode
+con <- file("/Users/mickfenneck/Desktop/final/en_US/en_US.news.txt", open="rb")
+news <- readLines(con, encoding="UTF-8")
+close(con)
+rm(con)
+```
+
+## Exploratory data analysis
+
+
+
+## Conclusion
+
+
+## Further analysis
+
+
+## References
