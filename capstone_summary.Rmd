@@ -39,7 +39,7 @@ In the project are also used the following libreries:
     - **stringi** [@stringi]
     - **ggplot2** [@ggplot2]
     - **magrittr** [@magrittr].
-    - **rmarkdown ** [@rmarkdown]
+    - **rmarkdown** [@rmarkdown]
     - **knitr** [@xie2013knitr]
 
 ## Data Description
@@ -62,7 +62,6 @@ rm(con)
 ```
 
 ## Exploratory data analysis
-
 
 
 ## Conclusion
